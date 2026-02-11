@@ -35,7 +35,7 @@ fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6&ty
                             <a href="${repo.html_url}" 
                                target="_blank" 
                                class="btn btn-outline-info btn-sm">
-                               Ver en GitHub
+                               Ir al repositorio
                             </a>
                         </div>
                     </div>
