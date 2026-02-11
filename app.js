@@ -30,7 +30,8 @@ fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6&ty
                             <h5 class="card-title">${repo.name}</h5>
                             <p class="card-text">${repo.description ?? "Sin descripción"}</p>
                             <p><strong>Lenguaje:</strong> ${repo.language ?? "N/A"}</p>
-                            <p>⭐ ${repo.stargazers_count}</p>
+                            <p><i class="bi bi-star-fill text-warning"></i>  ${repo.stargazers_count}</p>
+
                             <a href="${repo.html_url}" 
                                target="_blank" 
                                class="btn btn-outline-info btn-sm">
