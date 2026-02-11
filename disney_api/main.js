@@ -33,7 +33,6 @@ function displayCharacters(characters) {
 
 async function toggleDetail(card, id) {
 
-    // Si ya existe detalle, lo elimina (toggle)
     const existingDetail = card.querySelector(".detail");
     if (existingDetail) {
         existingDetail.remove();
