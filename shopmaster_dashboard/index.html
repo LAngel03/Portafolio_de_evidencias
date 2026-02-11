@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ShopMaster | Dashboard Productos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <h1>ShopMaster - Inventario</h1>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Buscar producto...">
+            <button onclick="buscarProductos()">Buscar</button>
+            <button onclick="mostrarFormulario()">Nuevo Producto</button>
+        </div>
+    </header>
+
+    <section class="filters">
+        <select id="categorySelect" onchange="filtrarCategoria()">
+            <option value="">Todas las categorías</option>
+        </select>
+
+        <select id="sortSelect" onchange="ordenarProductos()">
+            <option value="">Ordenar</option>
+            <option value="title-asc">Título A-Z</option>
+            <option value="title-desc">Título Z-A</option>
+            <option value="price-asc">Precio ↑</option>
+            <option value="price-desc">Precio ↓</option>
+        </select>
+    </section>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Imagen</th>
+                    <th>Título</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaProductos"></tbody>
+        </table>
+    </main>
+
+    <footer class="pagination">
+        <button onclick="paginaAnterior()">Anterior</button>
+        <span id="paginaInfo">Página 1</span>
+        <button onclick="paginaSiguiente()">Siguiente</button>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Nuevo Producto</h3>
+            <input type="text" id="nuevoTitulo" placeholder="Título">
+            <input type="number" id="nuevoPrecio" placeholder="Precio">
+            <button onclick="crearProducto()">Guardar</button>
+            <button onclick="cerrarFormulario()">Cancelar</button>
+        </div>
+    </div>
+    
+    <div id="detalleModal" class="modal">
+        <div class="modal-content">
+            <h3 id="detalleTitulo"></h3>
+            <p id="detalleCategoria"></p>
+            <p id="detallePrecio"></p>
+            <p id="detalleRating"></p>
+
+            <button id="btnMasDetalles">Ver más detalles</button>
+            <button onclick="cerrarDetalle()">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
