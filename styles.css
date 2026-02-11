@@ -1,0 +1,15 @@
+#perfil img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.card {
+    background-color: #1e293b;
+    color: white;
+    border: none;
+}
+
+.card a {
+    text-decoration: none;
+}
